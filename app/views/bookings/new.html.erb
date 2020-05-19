@@ -1,0 +1,10 @@
+<!-- new view -->
+<div class="container">
+  <%= form_for(@booking) do |f| %>
+  <%= f.string :user_id %>
+  <%= f.string :boat_id %>
+  <%= f.string :arrive %>
+  <%= f.string :leave %>
+  <%= f.submit %>
+<% end %>
+</div>
