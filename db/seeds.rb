@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
 Boat.destroy_all
+Booking.destroy_all
 
 user = User.create(email: 'joeladamdickens@gmail.com', password: 'password', name: 'joel', last_name: 'dickens')
 
 boats = Boat.create(user_id: user.id, name: 'Little Mermaid', price: 50, location: 'Bermuda')
-
