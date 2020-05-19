@@ -15,4 +15,10 @@ class BoatsController < ApplicationController
     @boat = Boat.new(params[:id])
     @boat.save
   end
+
+  private
+
+  def boat_params
+    params.require(:boat).permit(:name, )
+  end
 end
