@@ -1,8 +1,10 @@
-<h2><%= @boat.name %></h2>
-<img src="https://www.scanboat.com/images/boats/Motor-boatPrincess-F50-scanboat-picture-13457698.jpg", height: 300, width: 400, crop: :fill>
-<p><%= @boat.price %></p>
-<p><%= @boat.location %></p>
+<div class="container">
 
-<li><%= link_to "Book it", new_boat_booking_url(@boat) %></li>
-<li><%= link_to "Back all boats", boats_url %></li>
+  <h2><%= @boat.name %></h2>
+  <img src="https://www.scanboat.com/images/boats/Motor-boatPrincess-F50-scanboat-picture-13457698.jpg", height: 300, width: 400, crop: :fill>
+  <p><%= @boat.price %></p>
+  <p><%= @boat.location %></p>
 
+  <li><%= link_to "Book it", new_boat_booking_url(@boat) %></li>
+  <li><%= link_to "Back all boats", boats_url %></li>
+</div>
