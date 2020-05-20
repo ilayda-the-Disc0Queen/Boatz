@@ -1,4 +1,10 @@
-<h2>Congrats, you just booked a trip!!</h2>
+    <h2> Booking confirmation with <strong><%=@booking.boat.name%></strong></h2>
+
+    <p> From: <strong><%=@booking.arrive%></strong> </p>
+    <p> To: <strong><%=@booking.leave%></strong> </p>
+
+    <p> Total: <strong><%=@booking.boat.price * 7 %></strong> </p>
+   
     
     <li><%= link_to "Back to boat", boat_path(@booking.boat) %></li>
     <li><%= link_to "Back all boats", boats_path %></li>
