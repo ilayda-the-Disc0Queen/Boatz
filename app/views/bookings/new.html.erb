@@ -8,20 +8,3 @@
   <% end %>
 </div>
 
-
-    <div class="container">
-      <br>
-      <div class="row">
-        <% @boats.each do |boat| %>
-          <div class="col-12 col-md-6 col-lg-3">
-            <div class="card-product">
-              <%= link_to image_tag("https://media.istockphoto.com/photos/blue-striped-white-yacht-speeding-across-the-sea-picture-id162324941?k=6&m=162324941&s=612x612&w=0&h=7_RjlRsGuhb1holxGjZO_kAEfK5mMkacjapRAPZsvLU="), boat_path(boat) %>
-              <div class="card-product-infos">
-                <h2><%= link_to boat.name, boat_path(boat)%></h2>
-                <% end %>
-              </div>
-            </div>
-          </div>
-        <% end %>
-      </div>
-    </div>
