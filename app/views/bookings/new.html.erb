@@ -1,11 +1,12 @@
+
 <div class="container">
-  <h1><div class="back-button"><%= link_to "Back", boat_path(@boat), :class => "btn btn-primary" %></div>
-  <center>Book your boat!<center></h1>
+  <div class="back-button"><%= link_to "Back", boat_path(@boat), :class => "btn btn-primary" %></div>
+  <h1><center>Book your boat!<center></h1>
   <br>
   <p>You are booking <b><%= @boat.name %></b> in <%= @boat.location %> for $<%= @boat.price %> per day</p>
   <%= simple_form_for [ @boat, @booking ] do |f| %>
-    <%= f.input :arrive %>
-    <%= f.input :leave %>
+    <%= f.input :arrive, as: :date, html5: true %>
+    <%= f.input :leave, as: :date, html5: true %>
     <%= f.submit "Book!"%>
   <% end %>
 </div>
