@@ -16,6 +16,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'devise'
 gem 'geocoder'
+gem 'turbolinks'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
