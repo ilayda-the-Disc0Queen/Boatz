@@ -1,0 +1,9 @@
+<div class="container" >
+  <h2> Change the details of <%= @boat.name %></h2>
+  <%= simple_form_for [ @boat ] do |f| %>
+    <%= f.input :name, placeholder: 'Update name' %>
+    <%= f.input :price, placeholder: 'Update price per day' %>
+    <%= f.input :location, placeholder: 'Update location?' %>
+    <%= f.submit "Change it!", :class => "btn btn-primary"%>
+  <% end %>
+</div>
