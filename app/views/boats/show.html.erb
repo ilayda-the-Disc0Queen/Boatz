@@ -9,7 +9,11 @@
 
 <div class="container">
   <!-- <div class="row"> -->
+
+<button class="btn" style="float:right">Login</button>
+
   <h2><%= @boat.name %></h2>
+
   <div class="row">
     <div class="column">
       <%=image_tag("https://www.scanboat.com/images/boats/Motor-boatPrincess-F50-scanboat-picture-13457698.jpg")%>
@@ -23,8 +27,11 @@
       <div class="zoom"><%=image_tag("https://www.scanboat.com/images/boats/Motor-boatPrincess-F50-scanboat-picture-13457698.jpg")%></div>
     </div>
   </div>
-  <p>Price per day: $<%= @boat.price %></p>
-  <p>Location: <%= @boat.location %></p>
+
+  <div class="row">
+   <div class="column">
+  <p>Price per day: <b>$<%= @boat.price %></b></p>
+  <p>Location: <b><%= @boat.location %></b></p>
   <p>Description: </p>
     <li>Arch with integrated bimini and lighting</li>
     <li>Seakeeper Gyro Stabiliser</li>
@@ -36,5 +43,7 @@
     <!-- <li><%= link_to "Book it", new_boat_booking_url(@boat) %></li> -->
     <!-- <li><%= link_to "Back all boats", boats_url %></li> -->
   <!-- </div> -->
+  </div>
+  <div class="column"><%=image_tag("https://www.google.com/maps/d/thumbnail?mid=1jzQ0F21u1PJI_8BqWOAaSkFLHSM")%></div>
 </div>
 
