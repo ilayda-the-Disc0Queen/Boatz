@@ -46,6 +46,11 @@
 
   <!-- </div> -->
   </div>
-  <div class="column"><%=image_tag("https://www.google.com/maps/d/thumbnail?mid=1jzQ0F21u1PJI_8BqWOAaSkFLHSM")%></div>
+  <div class="column">
+    <div id="map"
+     style="width: 540px; height: 300px; margin: 10px"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  </div>
 </div>
 
