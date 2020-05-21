@@ -20,6 +20,18 @@ class BookingsController < ApplicationController
     end
   end
 
+  def edit
+    @booking = Booking.find(params[:id])
+    @boat = Boat.find(params[:boat_id])
+    @booking.boat = @boat
+    @booking.user = current_user
+  end
+
+  def update
+    @booking = Booking.find(params[:id])
+    @booking.update(booking_params)
+  end
+
   private
 
   def booking_params
