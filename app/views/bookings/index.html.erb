@@ -5,14 +5,14 @@
 
       <% @bookings.each do |booking| %>
         <div class="col-12 col-md-6 col-lg-4">
+          <%= link_to boat_path(booking.boat) do  %>
           <div class="card-product">
             <%= link_to image_tag("https://images.unsplash.com/photo-1432071079086-3f012ce3f1ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=802&q=80"), booking_path(booking) %>
             <div class="card-product-infos">
               <h2> You've booked: <%= booking.boat.name %></h2>
-              <!-- <p><%=booking.location%></p>
-              <p>$<%=booking.price%> per day</p> -->
             </div>
           </div>
+          <% end %>
         </div>
       <% end %>
     </div>

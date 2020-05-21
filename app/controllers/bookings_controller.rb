@@ -33,10 +33,7 @@ class BookingsController < ApplicationController
   end
 
   def index
-    @bookings = Booking.all
-    @boat = Boat.find(params[:boat_id])
-    @booking.boat = @boat
-    @booking.user = current_user
+    @bookings = Booking.where(user: current_user)
   end
 
   private
