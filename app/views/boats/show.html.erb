@@ -42,6 +42,8 @@
     <a class="btn btn-gradient" href="<%= new_boat_booking_url(@boat) %>">Book it</a>
     <!-- <li><%= link_to "Book it", new_boat_booking_url(@boat) %></li> -->
     <!-- <li><%= link_to "Back all boats", boats_url %></li> -->
+      <%= link_to "Edit booking", edit_boat_booking_path([@boat, @booking]) %>
+
   <!-- </div> -->
   </div>
   <div class="column">
