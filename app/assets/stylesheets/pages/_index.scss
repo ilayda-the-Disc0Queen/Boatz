@@ -88,7 +88,6 @@ h2{
   padding: 0 4px;
 }
 
-/* Create four equal columns that sits next to each other */
 .column {
   flex: 50%;
   max-width: 50%;
@@ -119,7 +118,50 @@ h2{
 }
 
 .zoom:hover {
-  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(1.05);
 }
 
+.text-column {
+  padding: 20px;
+}
 
+.boat-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-button {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  position: absolute;
+}
+
+.btn-light {
+  border: 1px solid rgba(44, 130, 201, .5);
+}
+
+.book-it-button {
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  position: absolute;
+}
+
+.search-div {
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+}
+
+.div-input {
+  width: 40%;
+}
+
+.div-btn {
+  outline: 1px solid rgba(44, 130, 201, .2);
+  outline-offset: -1px;
+  margin-left: 2px;
+  width: 5%;
+}

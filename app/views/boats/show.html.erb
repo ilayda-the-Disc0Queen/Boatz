@@ -8,11 +8,8 @@
 </head>
 
 <div class="container">
-  <!-- <div class="row"> -->
-
-<button class="btn" style="float:right">Login</button>
-
-  <h2><%= @boat.name %></h2>
+  <div class="boat-title"><h2><%= @boat.name %></h2></div>
+  <div class="back-button"> <a class="btn btn-light" href="<%= boats_url %>" role="button">Back</a></div>
 
   <div class="row">
     <div class="column">
@@ -30,22 +27,21 @@
 
   <div class="row">
    <div class="column">
-  <p>Price per day: <b>$<%= @boat.price %></b></p>
-  <p>Location: <b><%= @boat.location %></b></p>
-  <p>Description: </p>
-    <li>Arch with integrated bimini and lighting</li>
-    <li>Seakeeper Gyro Stabiliser</li>
-    <li>9.5kW Onan generator</li>
-    <li>Underwater lights</li>
-    <li>Electric anchor winch with anchor & chain</li>
-
-    <a class="btn btn-gradient" href="<%= new_boat_booking_url(@boat) %>">Book it</a>
-    <!-- <li><%= link_to "Book it", new_boat_booking_url(@boat) %></li> -->
-    <!-- <li><%= link_to "Back all boats", boats_url %></li> -->
-      <%= link_to "Edit booking", edit_boat_booking_path([@boat, @booking]) %>
-
-  <!-- </div> -->
+    <div class="text-column">
+      <p>Price per day: <b>£<%= @boat.price %></b></p>
+      <p>Location: <b><%= @boat.location %></b></p>
+      <p>Description: </p>
+        <li>Arch with integrated bimini and lighting</li>
+        <li>Seakeeper Gyro Stabiliser</li>
+        <li>9.5kW Onan generator</li>
+        <li>Underwater lights</li>
+        <li>Electric anchor winch with anchor & chain</li>
+      <a class="btn btn-gradient" href="<%= new_boat_booking_url(@boat) %>">Book it</a>
+      <!-- <li><%= link_to "Book it", new_boat_booking_url(@boat) %></li> -->
+      <!-- <li><%= link_to "Back all boats", boats_url %></li> -->
+    </div>
   </div>
+
   <div class="column">
     <div id="map"
      style="width: 540px; height: 300px; margin: 10px"

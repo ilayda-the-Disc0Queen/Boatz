@@ -17,6 +17,9 @@ gem 'webpacker'
 gem 'devise'
 gem 'geocoder'
 gem 'turbolinks'
+
+gem 'pg_search', '~> 2.3.0'
+gem "algoliasearch-rails"
 gem 'cloudinary', '~> 1.12.0'
 
 group :development do
