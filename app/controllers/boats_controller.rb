@@ -1,6 +1,11 @@
 class BoatsController < ApplicationController
   def index
-    @boats = Boat.all
+    if params[:query].present?
+      sql_query = "name ILIKE :query OR location ILIKE :query"
+      @boats = Boat.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @boats = Boat.all
+    end
   end
 
   def show
