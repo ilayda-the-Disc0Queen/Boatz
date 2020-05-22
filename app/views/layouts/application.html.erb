@@ -12,10 +12,15 @@
   <body>
     <!-- Banner should be here -->
     <div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky-top">
+
+
       <a class="navbar-brand" href="<%= boats_path %>">
-        <img src="https://image.flaticon.com/icons/svg/2932/2932525.svg" />
+        <img src="https://res.cloudinary.com/dv59x91lc/image/upload/v1590161596/logo_raul-03_ousnns.png" />
       </a>
+
       <h1 class="navbar-title"><b>Boatz</b></h1>
+
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -34,12 +39,13 @@
               <a class="nav-link" href="<%= my_boats_path %>">My boats</a>
             </li>
           <% end %>
-          <%= if current_user %>
+
+          <% if current_user %>
           <li class="nav-item active">
             <a class="nav-link" href="<%= bookings_path %>">My bookings</a>
           </li>
-          <%= end %>
-          
+          <% end %>
+
           <li class="nav-item">
             <a class="nav-link" href="<%= new_user_registration_path %>">Sign Up</a>
           </li>

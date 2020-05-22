@@ -3,6 +3,7 @@
   background: #0181c8;
   padding: 4px 24px;
   font-color: white;
+  opacity: .95;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -16,6 +17,9 @@
 .navbar-lewagon h1 {
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
 }
 
 .navbar-title {
