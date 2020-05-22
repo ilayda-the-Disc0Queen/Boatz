@@ -38,6 +38,16 @@ class BoatsController < ApplicationController
       render new
     end
   end
+  
+  def my_boats
+    @boats = current_user.boats
+  end
+
+  def destroy
+    @boat = Boat.find(params[:id])
+    @boat.destroy
+    redirect_to my_boats_path
+  end
 
   private
 
