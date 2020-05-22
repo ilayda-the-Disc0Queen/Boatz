@@ -22,13 +22,13 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-      
+
           <% if current_user && current_user.boats != [] %>
             <li class="nav-item active">
               <a class="nav-link" href="<%= my_boats_path %>">My boats</a>
             </li>
           <% end %>
-          
+
           <li class="nav-item active">
             <a class="nav-link" href="<%= bookings_path %>">My bookings</a>
           </li>
@@ -36,7 +36,7 @@
             <a class="nav-link" href="<%= new_user_registration_path %>">Sign Up</a>
           </li>
           <li class="nav-item dropdown">
-            <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://www.flaticon.com/free-icon/man_2922739?term=man-avatar&page=2&position=12"/>
+            <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/ce54bf11889067.562541ef7cde4.png"/>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="<%= new_user_session_path %>">Log in</a>
               <a class="dropdown-item" href="<%= destroy_user_session_path %>" data-method="delete" >Log out</a>
@@ -58,8 +58,5 @@
   </body>
 </html>
 
-
-<!-- <div>Icons made by <a href="https://www.flaticon.com/free-icon/man_2922739?term=man-avatar&page=2&position=12" title="Vitaly Gorbachev">Vitaly Gorbachev</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
-<!-- <div>Icons made by <a href="https://www.flaticon.com/free-icon/man_2922705" title="Vitaly Gorbachev">Vitaly Gorbachev</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
+<!-- https://mir-s3-cdn-cf.behance.net/project_modules/disp/ce54bf11889067.562541ef7cde4.png -->
 <!-- https://image.flaticon.com/icons/svg/2919/2919573.svg -->
-<!-- <div>Icons made by <a href="https://www.flaticon.com/authors/vitaly-gorbachev" title="Vitaly Gorbachev">Vitaly Gorbachev</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
