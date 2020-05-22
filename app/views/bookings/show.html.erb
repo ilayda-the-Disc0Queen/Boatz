@@ -5,11 +5,12 @@
   <p> From: <strong><%=@booking.arrive%></strong> </p>
   <p> To: <strong><%=@booking.leave%></strong> </p>
 
-  <p> Total: <strong>£<%=@booking.boat.price * 7 %></strong> </p>
+  <p> Total: <strong>£<%=@booking.total_price %> for <%= @booking.days_booked %> days</strong> </p>
   <div class="buttons">
     <a class="btn btn-gradient" href="<%= boat_path(@booking.boat) %>">Back to Boat</a>
     <a class="btn btn-gradient" href="<%= boats_path %>">View More Boats</a>
     <a class="btn btn-gradient" href="<%= bookings_path %>">Back to bookings</a>
+    <a class="btn btn-gradient" href="<%= edit_boat_booking_path([@boat, @booking]) %>">Edit booking</a>
   </div>
 </div>
 
