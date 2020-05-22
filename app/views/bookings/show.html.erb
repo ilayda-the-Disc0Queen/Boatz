@@ -10,7 +10,7 @@
     <a class="btn btn-gradient" href="<%= boat_path(@booking.boat) %>">Back to Boat</a>
     <a class="btn btn-gradient" href="<%= boats_path %>">View More Boats</a>
     <a class="btn btn-gradient" href="<%= bookings_path %>">Back to bookings</a>
-    <a class="btn btn-gradient" href="<%= edit_boat_booking_path([@booking, @boat]) %>">Edit booking</a>
+    <%= link_to "Edit booking", edit_boat_booking_path(@booking.boat, @booking), class: "btn btn-gradient" %>
   </div>
 </div>
 

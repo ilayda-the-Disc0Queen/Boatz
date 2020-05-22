@@ -29,7 +29,11 @@ class BookingsController < ApplicationController
 
   def update
     @booking = Booking.find(params[:id])
-    @booking.update(booking_params)
+    if @booking.update(booking_params)
+      redirect_to booking_path(@booking), notice: "Your booking has been updated!"
+    else
+      render :edit
+    end
   end
 
   def index
