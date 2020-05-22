@@ -1,16 +1,20 @@
 <div class="container" >
-  <h2> BOOKING CONFIRMATION</h2>
-  <h2>Sailing on <strong><%=@booking.boat.name%></strong></h2>
-  <br>
-  <p> From: <strong><%=@booking.arrive%></strong> </p>
-  <p> To: <strong><%=@booking.leave%></strong> </p>
-
-  <p> Total: <strong>£<%=@booking.total_price %> for <%= @booking.days_booked %> days</strong> </p>
-  <div class="buttons">
-    <a class="btn btn-gradient" href="<%= boat_path(@booking.boat) %>">Back to Boat</a>
-    <a class="btn btn-gradient" href="<%= boats_path %>">View More Boats</a>
-    <a class="btn btn-gradient" href="<%= bookings_path %>">Back to bookings</a>
-    <a class="btn btn-gradient" href="<%= edit_boat_booking_path([@booking, @boat]) %>">Edit booking</a>
-  </div>
+   <div class="card-product">
+      <%= link_to image_tag(@booking.boat.image), boat_path(@booking.boat) %>
+        <div class="card-product-infos">
+          <h2> BOOKING CONFIRMATION ✅</h2>
+          <h2>Sailing on <strong><%=@booking.boat.name%></strong></h2>
+          <br>
+          <p> From: <strong><%=@booking.arrive%></strong> </p>
+          <p> To: <strong><%=@booking.leave%></strong> </p>
+          <p> Total: <strong>£<%=@booking.total_price %> for <%= @booking.days_booked %> days</strong> </p>
+        </div>
+    </div>
+    <div class="buttons justify-content-center">
+      <a class="btn btn-gradient" href="<%= boat_path(@booking.boat) %>">Back to Boat</a>
+      <a class="btn btn-gradient" href="<%= boats_path %>">View More Boats</a>
+      <a class="btn btn-gradient" href="<%= bookings_path %>">View all bookings</a>
+      <%= link_to "Edit booking", edit_boat_booking_path(@booking.boat, @booking), class: "btn btn-gradient" %>
+    </div>
 </div>
 
